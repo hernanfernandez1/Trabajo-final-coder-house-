@@ -106,8 +106,8 @@ a {
 
 
     .logo {
-        line-height: 60px;
-        padding-left: 100px;
+        line-height: 100%;
+        padding-left: 100%;
 
     }
 
