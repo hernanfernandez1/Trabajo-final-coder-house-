@@ -14,6 +14,12 @@ a {
     text-decoration: none;
     color: rgb(12, 11, 11);
 }
+p {
+    font-family: 'Patua One', cursive ;
+}
+h1,h3, a {
+    font-family: 'Patua One', cursive ;
+}
 
 /*-------------Barra navegación------------------------------*/
 .header {
@@ -40,10 +46,13 @@ a {
     float: left;
     line-height: 75px;
     font-weight: 400;
-    font-size: 20px;
+    
     cursor: default;
-    font-family: 'Alex Brush', cursive;
+    font-family: 'Alex Brush', cursive !important;
 
+}
+.logo h4 {
+    font-size: 35px;
 }
 
 .menu {
@@ -95,7 +104,7 @@ a {
 
 
 
-@media screen and (min-width: 320px) and (max-width: 908px) {
+@media screen and (min-width: 320px) and (max-width: 954px) {
 
     .header {
         height: 60px;
@@ -199,7 +208,7 @@ a {
 }
 
 .mainindex p {
-    padding-bottom: 50px;
+    padding-bottom: 20px;
     font-size: 20px;
 }
 
@@ -227,6 +236,19 @@ a {
 }
 #crearespacio {
     padding-bottom: 50px;
+}
+.imgcarr {
+height: 470px;
+
+
+
+}
+.sectionindex {
+
+margin: 90px;
+justify-content: center;
+align-items: center;
+
 }
 
 @media screen and (min-width: 320px) and (max-width: 908px)
@@ -311,37 +333,26 @@ a {
 }
 
 .mainnosotros h1 {
-    padding-bottom: 20px;
+    
+    padding-top: 70px;
     font-size: 40px;
     text-decoration: underline;
     text-decoration-color: rgba(235, 172, 100, 0.76);
 }
 
-.mainnosotros p {
-    padding-bottom: 40px;
-    font-size: 20px;
-    font-family: 'Fredoka', sans-serif;
-}
 
 .mainnosotros a {
-    font-size: 20px;
-    font-family: 'Fredoka', sans-serif;
-    text-decoration: underline;
-
+    
+color: #f1f2f3;
 }
 
-.mainnosotros a:hover {
-    color: rgb(104, 90, 65);
-    background-color: rgba(243, 190, 91, 0.37);
 
-
-}
 
 .botonnosotros {
     justify-content: center;
     text-align: center;
     font-size: 40px;
-    padding-bottom: 100px;
+    padding-bottom: 10px;
 
 
 
@@ -352,10 +363,15 @@ a {
 }
 
 #boton {
-    background-color: rgba(243, 190, 91, 0.322);
+    background-color: rgba(235, 172, 100, 0.984);
     font-size: 20px;
-}
+    background-color: rgba(235, 172, 100, 0.76);
+    border-color: black;
+ }
 
+#boton:hover {
+   border-color: rgba(235, 172, 100, 0.984);
+}
 
 
 .sectionnos {
@@ -410,6 +426,66 @@ padding-top: 100px;
 
 
 
+.height-100 {
+    height: 100vh
+}
+
+.cardnos {
+    width: 400px;
+    height: 400px;
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer
+}
+.cardnos {
+    font-family: 'Patua One', cursive ;
+}
+.cardnos:hover .clip-path {
+    clip-path: circle(320px at center 0)
+}
+
+.clip-path {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    clip-path: circle(220px at center 0);
+    background: rgba(235, 172, 100, 0.984);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+    border-color: #000000;
+}
+
+.clip-path h2 {
+    color: #fff;
+    font-size: 30px
+}
+
+.content {
+    padding: 15px
+}
+
+.content p {
+    font-size: 14px
+}
+
+.content a {
+    width: 100px;
+    height: 50px;
+    background-color:rgba(235, 172, 100, 0.572);
+    color: #fff !important;
+    padding: 7px;
+    border-radius: 6px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 12px
+}
+
+.content a:hover {
+    background-color: rgba(235, 172, 100, 0.984)
+}
 
 
 /* -------------ANIMACIÓN TÍTULO-------------- */
@@ -419,7 +495,7 @@ div.at-container {
     height: 100%;
 }
 
-.at-item {
+.animtit{
     color: #000000;
     animation-name: shadow-pop-bottom;
     animation-duration: 2s;
