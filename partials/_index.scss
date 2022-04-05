@@ -1,0 +1,83 @@
+
+$colorprincipal :rgba(235, 172, 100, 0.76) ;
+$fuente20px:20px;
+$max:100%;
+
+/* imagen de la empresa*/
+
+.aside   {
+    width:$max;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+}
+
+.mainindex {
+	display: flex;
+	width: $max;
+	height: 30%;
+	flex-direction: column;
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	h1 {
+		padding-bottom: 30px;
+		text-decoration: underline;
+		text-decoration-color: $colorprincipal;
+	}
+	p {
+		padding-bottom: 20px;
+		font-size:$fuente20px;
+	}
+	iframe {
+		width:$max;
+		height: $max;
+		z-index: -1;
+		margin-top: 10px;
+	}
+}
+
+
+.gifindex {
+    padding-bottom: 50px;
+}
+.botonindex {
+	justify-content: center;
+	background-color: $colorprincipal;
+	text-align: center;
+	font-size:$fuente20px;
+	a {
+		color: white;
+		&:hover {
+			border-color: $colorprincipal;
+		}
+	}
+}
+
+#crearespacio {
+    padding-bottom: 50px;
+}
+.imgcarr {
+height: 470px;
+
+
+
+}
+.sectionindex {
+
+margin: 90px;
+justify-content: center;
+align-items: center;
+
+}
+
+@media screen and (min-width: 320px) and (max-width: 908px)
+
+/* para achicar el espacio que se crea entre elementos */
+    {
+    #crearespacio {
+        padding-bottom: 0px;
+
+    }
+}
