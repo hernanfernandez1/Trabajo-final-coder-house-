@@ -17,7 +17,8 @@ p {
   font-family: 'Patua One', cursive;
 }
 
-h1, h3, a {
+h1,
+a {
   font-family: 'Patua One', cursive;
 }
 
@@ -43,16 +44,14 @@ h1, h3, a {
   margin: auto;
 }
 
-.logo {
-  padding-top: 15px;
+.logo p {
+  padding-top: 1px;
   float: left;
   line-height: 75px;
   font-weight: 400;
+  font-size: 35px;
   cursor: default;
   font-family: 'Alex Brush', cursive !important;
-}
-
-.logo h4 {
   font-size: 35px;
 }
 
@@ -241,60 +240,6 @@ h1, h3, a {
   }
 }
 
-/* ------------------------------------------FOOTER------------------------------------------------------ */
-.footer {
-  padding-top: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  height: 100px;
-  z-index: -1;
-  -webkit-box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4);
-          box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4);
-  background-color: rgba(160, 152, 143, 0.644);
-}
-
-.footer nav {
-  padding-right: 100px;
-  text-align: center;
-}
-
-.footer a {
-  color: black;
-  display: inline-block;
-  text-decoration: none;
-  padding: 7px 15px;
-  line-height: normal;
-  -webkit-transition: all 500ms ease;
-  transition: all 500ms ease;
-  border-bottom: 4px solid transparent;
-}
-
-.footer ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding-top: 100px;
-}
-
-.footericon {
-  color: #790f0f;
-  text-decoration: none;
-  list-style: none;
-  text-align: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  height: 100%;
-  width: 100%;
-  padding: 50px;
-}
-
-/* ------------------------------------------FIN FOOTER------------------------------------------------------ */
 /* ------------------------------------------SECCIÓN NOSOTROS------------------------------------------------------ */
 .mainnosotros {
   display: -webkit-box;
@@ -435,7 +380,7 @@ h1, h3, a {
   border-color: #000000;
 }
 
-.clip-path h2 {
+.clip-path p {
   color: #fff;
   font-size: 30px;
 }
@@ -522,7 +467,6 @@ div.at-container {
 
 /* -----------FIN ANIMACIÓN TÍTULO---- */
 /* ------------------------------FIN SECCIÓN NOSOTROS---------------------------- */
-/* -------------------------------------------------------------------SEGUIR CON SASS DESDE ACA------------------------------------------ */
 /* -------------------------------------------INICIO SECCIÓN STOCK------------------------------------------------------ */
 .mainstock {
   display: -webkit-box;
@@ -552,8 +496,8 @@ div.at-container {
   font-size: 30px;
 }
 
-.espacioabajostock {
-  padding-bottom: 100px;
+.titstock {
+  font-size: 35px;
 }
 
 /* -------------------------------------------FIN SECCIÓN STOCK------------------------------------------------------ */
@@ -620,10 +564,6 @@ div.at-container {
           justify-content: center;
 }
 
-.container2 {
-  height: 50vh;
-}
-
 .card2 h1 {
   font-size: 48px;
   margin-bottom: 0px;
@@ -631,6 +571,10 @@ div.at-container {
 
 .card2 span {
   font-size: 28px;
+}
+
+.container2 {
+  height: 50vh;
 }
 
 .image {
@@ -724,15 +668,15 @@ div.at-container {
   border-color: black;
 }
 
+.colorboton:hover {
+  background-color: black;
+  border-color: #f5be76;
+}
+
 .botoncolor2 {
   background-color: white;
   border-color: black;
   color: black;
-}
-
-.colorboton:hover {
-  background-color: black;
-  border-color: #f5be76;
 }
 
 .botoncolor2:hover {
@@ -744,7 +688,7 @@ div.at-container {
   padding: 10px;
 }
 
-/* -------------------------------------------FIN SECCIÓN MUJER------------------------------------------------------ */
+/* --------------------------FIN SECCIÓN MUJER----------------------------------- */
 /* -------------------------------------------SECCIÓN NIÑOS Y BEBÉS------------------------------------------------------ */
 .tarjetas {
   padding-top: 20px;
@@ -764,7 +708,8 @@ div.at-container {
   background-color: black;
 }
 
-/*---------------GRID GALERÍA---------------*/
+/* --------------------------------FIN SECCIÓN NIÑOS Y BEBÉS------------------------------------ */
+/*-------------------------------GRID GALERÍA------------------------------------------------------------------------*/
 .container1 {
   display: -ms-grid;
   display: grid;
@@ -796,11 +741,7 @@ div.at-container {
   -o-object-fit: cover;
      object-fit: cover;
   -webkit-transition: all .9s ease;
-  /* Safari y Chrome */
-  /* Firefox */
-  /* IE 9 */
   transition: all .9s ease;
-  /* Opera */
 }
 
 .galeriaimag:hover {
@@ -830,31 +771,11 @@ div.at-container {
           transform: scale(1.25);
 }
 
-@media (min-width: 1300px) {
-  .galeriaimag {
-    width: 100%;
-    height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
-    -webkit-transition: all .9s ease;
-    /* Safari y Chrome */
-    /* Firefox */
-    /* IE 9 */
-    transition: all .9s ease;
-    /* Opera */
-  }
-  .container1 {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: (1fr)[3];
-        grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: 400px;
-    padding: 20px;
-    grid-gap: 10px;
-  }
+/*------------ESTILOS MODAL GALERÍA-------------------------*/
+.modal {
+  display: none;
 }
 
-/*------------ESTILOS MODAL GALERÍA-------------------------*/
 .modal:target {
   display: block;
   position: fixed;
@@ -863,10 +784,6 @@ div.at-container {
   left: 0;
   width: 100%;
   height: 100%;
-}
-
-.modal {
-  display: none;
 }
 
 .imagmod {
@@ -915,5 +832,105 @@ div.at-container {
   font-size: 30px;
 }
 
+@media (min-width: 1300px) {
+  .galeriaimag {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -webkit-transition: all .9s ease;
+    transition: all .9s ease;
+  }
+  .container1 {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 400px;
+    padding: 20px;
+    grid-gap: 10px;
+  }
+}
+
 /*---------------FIN GRID GALERÍA---------------*/
+/* ------------------------------------------FOOTER------------------------------------------------------ */
+.footer {
+  padding-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100px;
+  z-index: -1;
+  -webkit-box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4);
+  background-color: rgba(160, 152, 143, 0.644);
+}
+
+.footer nav {
+  padding-right: 100px;
+  text-align: center;
+}
+
+.footer a {
+  color: black;
+  display: inline-block;
+  text-decoration: none;
+  padding: 7px 15px;
+  line-height: normal;
+  -webkit-transition: all 500ms ease;
+  transition: all 500ms ease;
+  border-bottom: 4px solid transparent;
+}
+
+.footer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 100px;
+}
+
+.logofooter {
+  color: black;
+  display: inline-block;
+  text-decoration: none;
+  padding: 7px 15px;
+  line-height: normal;
+  -webkit-transition: all 500ms ease;
+  transition: all 500ms ease;
+  border-bottom: 4px solid transparent;
+}
+
+.logofooter p {
+  padding-top: 1px;
+  float: left;
+  line-height: 75px;
+  font-weight: 400;
+  font-size: 35px;
+  cursor: default;
+  font-family: 'Alex Brush', cursive !important;
+  font-size: 35px;
+}
+
+.titgalnos {
+  font-size: 42px;
+}
+
+.footericon {
+  color: #790f0f;
+  text-decoration: none;
+  list-style: none;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  width: 100%;
+  padding: 50px;
+}
+
+/* ------------------------------------------FIN FOOTER------------------------------------------------------ */
 /*# sourceMappingURL=estilo.css.map */

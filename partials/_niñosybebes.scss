@@ -1,0 +1,16 @@
+.tarjetas {
+	padding-top: 20px;
+	padding-bottom: 60px;
+	.card {
+		&:hover {
+			border: 5px solid rgba(235, 172, 100, 0.76);
+		}
+	}
+}
+.colorboton {
+	background-color: rgba(235, 172, 100, 0.76);
+	border-color: black;
+	&:hover {
+		background-color: black;
+	}
+}
