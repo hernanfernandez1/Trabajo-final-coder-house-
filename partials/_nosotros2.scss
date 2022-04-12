@@ -1,18 +1,33 @@
+//mixin
+@mixin flex ($display, $textalign, $flexdirection) {
+	display: $display;
+	text-align: $textalign;
+	flex-direction: $flexdirection;
+}
+//extend
+%tam-one-hundred {
+	height: 100%;
+	width: 100%;
+
+}
+
+
 
 .mainnosotros {
-	display: flex;
+	@include flex(flex, center, column);
+
 	width: 100%;
 	height: 30%;
-	flex-direction: column;
-	text-align: center;
 	padding-top: 20px;
 	padding-bottom: 20px;
+
 	h1 {
 		padding-top: 70px;
 		font-size: 40px;
 		text-decoration: underline;
 		text-decoration-color: rgba(235, 172, 100, 0.76);
 	}
+
 	a {
 		color: #f1f2f3;
 	}
@@ -21,15 +36,15 @@
 
 
 .botonnosotros {
-    justify-content: center;
-    text-align: center;
-    font-size: 40px;
-    padding-bottom: 10px;
+	justify-content: center;
+	text-align: center;
+	font-size: 40px;
+	padding-bottom: 10px;
 
-    a {
-        text-decoration: none;
-    }
-    
+	a {
+		text-decoration: none;
+	}
+
 
 }
 
@@ -38,6 +53,7 @@
 	font-size: 20px;
 	background-color: rgba(235, 172, 100, 0.76);
 	border-color: black;
+
 	&:hover {
 		border-color: rgba(235, 172, 100, 0.984);
 	}
@@ -47,14 +63,16 @@
 .sectionnos {
 	display: flex;
 	padding-top: 100px;
+
 	div {
-		width: 100%;
-		height: 100%;
+		@extend %tam-one-hundred;
+		
 		z-index: -1;
 		position: relative;
 		align-items: center;
 		text-align: center;
 	}
+
 	li {
 		display: inline;
 		text-decoration: none;
@@ -68,10 +86,12 @@
 	img {
 		width: 100%;
 		height: 320px;
+
 		&:hover {
 			border: 5px solid rgba(235, 172, 100, 0.76);
 		}
 	}
+
 	.pad {
 		padding: 25px;
 		margin: 0px;
@@ -83,6 +103,7 @@
 .tarjetas {
 	padding-top: 20px;
 	padding-bottom: 40px;
+
 	.card {
 		&:hover {
 			border: 5px solid rgba(235, 172, 100, 0.76);
@@ -92,7 +113,7 @@
 
 
 .height-100 {
-    height: 100vh
+	height: 100vh
 }
 
 .cardnos {
@@ -103,6 +124,7 @@
 	overflow: hidden;
 	cursor: pointer;
 	font-family: 'Patua One', cursive;
+
 	&:hover {
 		.clip-path {
 			clip-path: circle(320px at center 0);
@@ -111,29 +133,30 @@
 }
 
 .clip-path {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    clip-path: circle(220px at center 0);
-    background: rgba(235, 172, 100, 0.984);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.3s;
-    border-color: #000000;
-    p
-	 {
-        color: #fff;
-        font-size: 30px
-    }
+	position: relative;
+	@extend %tam-one-hundred;
+	clip-path: circle(220px at center 0);
+	background: rgba(235, 172, 100, 0.984);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: all 0.3s;
+	border-color: #000000;
+
+	p {
+		color: #fff;
+		font-size: 30px
+	}
 }
 
 
 .content1 {
 	padding: 15px;
+
 	p {
 		font-size: 14px;
 	}
+
 	a {
 		width: 100px;
 		height: 50px;
@@ -144,6 +167,7 @@
 		padding-left: 20px;
 		padding-right: 20px;
 		font-size: 12px;
+
 		&:hover {
 			background-color: rgba(235, 172, 100, 0.984);
 		}
@@ -153,35 +177,35 @@
 
 /* -------------ANIMACIÓN TÍTULO-------------- */
 div.at-container {
-    display: flex;
+	display: flex;
 
-    height: 100%;
+	height: 100%;
 }
 
-.animtit{
-    color: #000000;
-    animation-name: shadow-pop-bottom;
-    animation-duration: 2s;
-    animation-timing-function: ease;
-    animation-delay: 3s;
-    animation-iteration-count: 2;
-    animation-direction: normal;
-    animation-fill-mode: none;
+.animtit {
+	color: #000000;
+	animation-name: shadow-pop-bottom;
+	animation-duration: 2s;
+	animation-timing-function: ease;
+	animation-delay: 3s;
+	animation-iteration-count: 2;
+	animation-direction: normal;
+	animation-fill-mode: none;
 
 
 
 }
 
 @keyframes shadow-pop-bottom {
-    0% {
-        transform: translateZ(0) translateY(0);
-        box-shadow: 0 0 0 0 transparent;
-    }
+	0% {
+		transform: translateZ(0) translateY(0);
+		box-shadow: 0 0 0 0 transparent;
+	}
 
-    100% {
-        transform: translateZ(50px) translateY(-12px);
-        box-shadow: 0 12px 20px -12px rgba(0, 0, 0, .35);
-    }
+	100% {
+		transform: translateZ(50px) translateY(-12px);
+		box-shadow: 0 12px 20px -12px rgba(0, 0, 0, .35);
+	}
 }
 
 
